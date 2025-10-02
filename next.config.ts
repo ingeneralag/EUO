@@ -10,7 +10,20 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  output: 'standalone',
+  // ❌ DO NOT USE 'standalone' for non-Docker deployment
+  // output: 'standalone', // Only for Docker - causes static assets to fail with pm2+nginx
+  
+  // ✅ No assetPrefix or basePath needed for standard deployment
+  // These are left as defaults (undefined and '') for nginx reverse proxy
+  
+  // Enable static optimization
+  trailingSlash: false,
+  generateEtags: true, // Enable ETags for better caching
+  
+  // Optimize for production
+  compress: true,
+  poweredByHeader: false,
+  
   images: {
     remotePatterns: [
       {
@@ -20,6 +33,24 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
+    // Optimize image loading
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
+  },
+  
+  // Ensure proper headers for static assets
+  async headers() {
+    return [
+      {
+        source: '/_next/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
   },
 };
 
