@@ -1,0 +1,193 @@
+{
+  "metadata": {
+    "title": "Sitovia — Soluzioni Software per l'Europa e l'Australia",
+    "description": "Servizi professionali di sviluppo web e mobile per aziende in Italia, Spagna, Austria e Australia. Soluzioni software personalizzate per le tue esigenze."
+  },
+  "common": {
+    "brand": "Sitovia",
+    "tagline": "Soluzioni software per l'Europa e l'Australia",
+    "cta": "Contattaci",
+    "learnMore": "Scopri di più"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Servizi",
+    "work": "Lavori",
+    "about": "Chi siamo",
+    "contact": "Contatto",
+    "pricing": "Prezzi"
+  },
+  "services": {
+    "badge": "Cosa Offriamo",
+    "heading": "Trasforma la Tua Azienda con i Nostri Servizi Esperti",
+    "description": "Soluzioni complete personalizzate per le tue esigenze uniche",
+    "web": {
+      "title": "Sviluppo Web",
+      "badge": "Moderno e Responsive",
+      "description": "Costruisci siti web accattivanti e ad alte prestazioni che catturano il tuo pubblico. Dal design responsive all'esperienza utente fluida, creiamo soluzioni web che producono risultati e fanno crescere il tuo business."
+    },
+    "mobile": {
+      "title": "App Mobile",
+      "badge": "Native e Cross-Platform",
+      "description": "Sviluppa potenti applicazioni mobili per iOS e Android. Che siano native o multipiattaforma, forniamo app che i tuoi utenti ameranno, con prestazioni fluide e interfacce intuitive."
+    },
+    "ecommerce": {
+      "title": "Soluzioni E-Commerce",
+      "badge": "Negozi Online Completi",
+      "description": "Lancia il tuo negozio online con fiducia. Costruiamo piattaforme e-commerce sicure e scalabili che convertono i visitatori in clienti, con sistemi di pagamento integrati e gestione dell'inventario."
+    },
+    "consulting": {
+      "title": "Consulenza IT",
+      "badge": "Guida Strategica",
+      "description": "Naviga nel complesso mondo della tecnologia con la guida di esperti. I nostri consulenti ti aiutano a prendere decisioni informate, ottimizzare la tua infrastruttura e implementare le migliori pratiche per il successo a lungo termine."
+    },
+    "cloud": {
+      "title": "Soluzioni Cloud",
+      "badge": "Infrastruttura Scalabile",
+      "description": "Migra al cloud e sblocca un potenziale illimitato. Progettiamo e implementiamo architetture cloud che si adattano al tuo business, garantendo affidabilità, sicurezza ed efficienza dei costi."
+    },
+    "maintenance": {
+      "title": "Manutenzione e Supporto",
+      "badge": "Sempre Disponibili",
+      "description": "Mantieni i tuoi sistemi funzionanti senza problemi con il nostro supporto continuo. Dagli aggiornamenti regolari alle riparazioni di emergenza, siamo qui 24/7 per assicurarci che la tecnologia non ti rallenti mai."
+    }
+  },
+  "company": {
+    "story": {
+      "title": "La Nostra Storia",
+      "description": "Scopri il nostro percorso e i nostri valori"
+    },
+    "team": {
+      "title": "Il Nostro Team",
+      "description": "Incontra gli esperti di Syntax"
+    },
+    "careers": {
+      "title": "Carriere",
+      "description": "Unisciti al nostro team in crescita"
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Approfondimenti, tutorial e novità aziendali"
+    }
+  },
+  "hero": {
+    "title": "Costruisci il Tuo Futuro Digitale",
+    "subtitle": "Soluzioni software professionali per l'Europa e l'Australia",
+    "description": "Creiamo applicazioni web e mobile moderne e scalabili che fanno crescere il tuo business. Dal concept al deployment, siamo il tuo partner tecnologico di fiducia.",
+    "cta_primary": "Inizia il Tuo Progetto",
+    "cta_secondary": "Vedi i Nostri Lavori",
+    "trusted_by": "Di fiducia per aziende in",
+    "countries": "Italia, Spagna, Austria e Australia"
+  },
+  "work": {
+    "badge": "Il Nostro Portfolio",
+    "heading": "I Nostri Lavori Recenti",
+    "description": "Scopri i nostri ultimi progetti e vedi come abbiamo aiutato le aziende a trasformare la loro presenza digitale con soluzioni innovative.",
+    "filters": {
+      "all": "Tutti i Progetti",
+      "web": "Sviluppo Web",
+      "mobile": "App Mobile",
+      "ecommerce": "E-commerce"
+    },
+    "viewProject": "Vedi Progetto",
+    "viewAll": "Vedi Tutti i Progetti",
+    "featured": "In Evidenza",
+    "technologies": "Tecnologie Utilizzate"
+  },
+  "whyChooseUs": {
+    "badge": "Perché Sceglierci",
+    "heading": "Cosa Ci Rende Diversi",
+    "description": "Scopri i vantaggi che ci distinguono e ci rendono la scelta preferita dalle aziende di tutto il mondo."
+  },
+  "feedback": {
+    "heading": "Hai Mai Visto Questo Livello di Soddisfazione del Cliente!",
+    "description": "Non credere solo alle nostre parole — ecco cosa dicono di noi i nostri clienti.",
+    "playAudio": "Riproduci Audio",
+    "pauseAudio": "Pausa Audio",
+    "reset": "Ripristina"
+  },
+  "locations": {
+    "badge": "I Nostri Clienti Globali",
+    "heading": "Di Fiducia per Clienti in Tutto il Mondo",
+    "description": "Siamo orgogliosi di servire clienti straordinari in Italia, Spagna, Austria, USA e Australia, fornendo soluzioni digitali eccezionali che guidano il loro successo."
+  },
+  "blog": {
+    "badge": "Ultimi Approfondimenti",
+    "heading": "Dal Nostro Blog",
+    "description": "Rimani aggiornato con le ultime tendenze, consigli e approfondimenti dal nostro team di esperti in sviluppo web, SEO e design.",
+    "readMore": "Leggi di Più",
+    "viewAll": "Vedi Tutti gli Articoli",
+    "featured": "In Evidenza",
+    "minRead": "min di lettura"
+  },
+  "contact": {
+    "badge": "Mettiti in Contatto",
+    "heading": "Lavoriamo Insieme",
+    "description": "Pronto per iniziare il tuo prossimo progetto? Ci piacerebbe sentirti. Inviaci un messaggio e risponderemo il prima possibile.",
+    "form": {
+      "title": "Inviaci un messaggio",
+      "name": "Nome Completo",
+      "email": "Indirizzo Email",
+      "company": "Azienda",
+      "phone": "Numero di Telefono",
+      "subject": "Oggetto",
+      "message": "Messaggio",
+      "send": "Invia Messaggio",
+      "sending": "Invio in corso...",
+      "success": "Messaggio Inviato!",
+      "successDescription": "Grazie per il tuo messaggio. Ti risponderemo presto.",
+      "namePlaceholder": "Mario Rossi",
+      "emailPlaceholder": "mario@esempio.com",
+      "companyPlaceholder": "La Tua Azienda",
+      "phonePlaceholder": "+39 06 1234 5678",
+      "subjectPlaceholder": "Come possiamo aiutarti?",
+      "messagePlaceholder": "Raccontaci del tuo progetto..."
+    },
+    "info": {
+      "getInTouch": "Mettiti in contatto",
+      "email": {
+        "title": "Scrivici",
+        "value": "hello@sitovia.com",
+        "description": "Inviaci un'email in qualsiasi momento"
+      },
+      "phone": {
+        "title": "Chiamaci",
+        "value": "+39 06 1234 5678",
+        "description": "Lun-Ven dalle 8:00 alle 17:00"
+      },
+      "address": {
+        "title": "Vienici a Trovare",
+        "value": "Roma, Italia",
+        "description": "Via del Corso, 123"
+      },
+      "hours": {
+        "title": "Orari di Ufficio",
+        "weekdays": "Lunedì - Venerdì",
+        "weekdaysTime": "8:00 - 18:00",
+        "saturday": "Sabato",
+        "saturdayTime": "9:00 - 16:00",
+        "sunday": "Domenica",
+        "sundayTime": "Chiuso"
+      },
+      "offices": {
+        "title": "I Nostri Uffici"
+      }
+    }
+  },
+  "footer": {
+    "description": "Creiamo esperienze digitali eccezionali che guidano la crescita del business. Dallo sviluppo web all'ottimizzazione SEO, siamo il tuo partner di fiducia nella trasformazione digitale.",
+    "followUs": "Seguici",
+    "stayUpdated": "Rimani Aggiornato",
+    "newsletter": {
+      "description": "Iscriviti alla nostra newsletter per gli ultimi aggiornamenti e approfondimenti.",
+      "placeholder": "Inserisci la tua email",
+      "subscribe": "Iscriviti",
+      "privacy": "Rispettiamo la tua privacy. Disiscriviti in qualsiasi momento."
+    },
+    "copyright": "© 2024 Sitovia. Realizzato con",
+    "madeIn": "in Italia, Spagna e Austria.",
+    "backToTop": "Torna in cima"
+  }
+}
+
+
