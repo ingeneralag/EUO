@@ -141,72 +141,107 @@ export function HeroSection() {
         )}
       </div>
 
-      {/* Main Content */}
-      <div className="relative z-20 flex-1 flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8">
+      {/* Main Content - Better mobile spacing */}
+      <div className={`relative z-20 flex-1 flex flex-col justify-center items-center text-center ${
+        isMobile 
+          ? "px-6 py-8" // More padding on mobile
+          : "px-4 sm:px-6 lg:px-8"
+      }`}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
+          className={isMobile ? "w-full" : "max-w-4xl mx-auto"}
         >
-          {/* Countries Badge */}
+          {/* Countries Badge - Smaller on mobile */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6"
+            className={`inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 text-primary font-medium mb-8 ${
+              isMobile 
+                ? "px-3 py-1.5 text-xs" 
+                : "px-4 py-2 text-sm"
+            }`}
           >
-            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-            Trusted by companies across Italy, Spain, Austria & Australia
+            <span className={`bg-green-500 rounded-full animate-pulse ${
+              isMobile ? "w-1.5 h-1.5" : "w-2 h-2"
+            }`}></span>
+            <span className={isMobile ? "text-xs" : "text-sm"}>
+              Trusted by companies across Italy, Spain, Austria & Australia
+            </span>
           </motion.div>
 
-          {/* Main Heading with Sparkles */}
+          {/* Main Heading with Sparkles - Much larger on mobile */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="mb-6"
+            className={isMobile ? "mb-6" : "mb-8"}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <h1 className={`font-bold leading-tight ${
+              isMobile 
+                ? "text-6xl sm:text-7xl" // Much larger on mobile
+                : "text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+            }`}>
               <SparklesText 
                 text="Sitovia" 
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold"
+                className={`font-bold ${
+                  isMobile 
+                    ? "text-6xl sm:text-7xl" // Much larger on mobile
+                    : "text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+                }`}
                 sparklesCount={isMobile ? 3 : 8}
                 colors={{ first: "#9333EA", second: "#C084FC" }}
               />
               <br />
-              <span className="bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent">
+              <span className={`bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent ${
+                isMobile 
+                  ? "text-3xl sm:text-4xl" // Smaller subtitle on mobile
+                  : "text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
+              }`}>
                 Software Solutions
               </span>
             </h1>
           </motion.div>
 
-          {/* Description */}
+          {/* Description - Better spacing on mobile */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-lg sm:text-xl text-muted-foreground dark:text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed"
+            className={`text-muted-foreground dark:text-white/70 max-w-2xl mx-auto leading-relaxed ${
+              isMobile 
+                ? "text-base mb-8 px-4" // Better mobile spacing
+                : "text-lg sm:text-xl mb-10"
+            }`}
           >
             We create exceptional digital experiences that drive business growth. 
             From web development to SEO optimization, we're your trusted partner in digital transformation.
           </motion.p>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons - Better mobile layout */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className={`flex justify-center items-center ${
+              isMobile 
+                ? "flex-col gap-3 px-4" // Tighter spacing on mobile
+                : "flex-col sm:flex-row gap-4"
+            }`}
           >
             <MagneticElement disabled={isMobile}>
               <Link href={`/${currentLocale}/contact`}>
                 <RainbowButton
                   onClick={() => trackCTAClick('hero_get_started')}
-                  className="px-8 py-4 text-lg font-semibold"
+                  className={isMobile 
+                    ? "px-6 py-3 text-base font-semibold w-full max-w-xs" // Full width on mobile
+                    : "px-8 py-4 text-lg font-semibold"
+                  }
                 >
                   Get Started Today
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className={`ml-2 ${isMobile ? "h-4 w-4" : "h-5 w-5"}`} />
                 </RainbowButton>
               </Link>
             </MagneticElement>
@@ -215,11 +250,15 @@ export function HeroSection() {
               <Link href={`/${currentLocale}/work`}>
                 <Button 
                   variant="outline" 
-                  size="lg"
-                  className="px-8 py-4 text-lg font-semibold bg-background/80 backdrop-blur-sm hover:bg-background/90 transition-all duration-300"
+                  size={isMobile ? "default" : "lg"}
+                  className={`font-semibold bg-background/80 backdrop-blur-sm hover:bg-background/90 transition-all duration-300 ${
+                    isMobile 
+                      ? "px-6 py-3 text-base w-full max-w-xs" // Full width on mobile
+                      : "px-8 py-4 text-lg"
+                  }`}
                   onClick={() => trackCTAClick('hero_view_work')}
                 >
-                  <Play className="mr-2 h-5 w-5" />
+                  <Play className={`mr-2 ${isMobile ? "h-4 w-4" : "h-5 w-5"}`} />
                   View Our Work
                 </Button>
               </Link>
