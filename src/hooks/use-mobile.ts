@@ -11,9 +11,9 @@ export function useIsMobile() {
       const mobileKeywords = ['mobile', 'android', 'iphone', 'ipad', 'tablet'];
       const isMobileDevice = mobileKeywords.some(keyword => userAgent.includes(keyword));
       const isSmallScreen = window.innerWidth < 768;
-      const isTouchDevice = 'ontouchstart' in window;
       
-      setIsMobile(isMobileDevice || (isSmallScreen && isTouchDevice));
+      // Consider mobile if either mobile device OR small screen
+      setIsMobile(isMobileDevice || isSmallScreen);
     };
 
     checkDevice();

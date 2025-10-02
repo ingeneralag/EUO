@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RainbowButton } from "@/components/ui/rainbow-button";
-import { SparklesCore } from "@/components/ui/sparkles";
+import { SparklesCore } from "@/components/ui/sparkles-simple";
 import { SparklesText } from "@/components/ui/sparkles-text";
 import { InteractiveBackground } from "@/components/ui/interactive-background";
 import { CursorTrail } from "@/components/ui/cursor-trail";
@@ -34,7 +34,11 @@ export function HeroSection() {
 
   return (
     <section 
-      className="relative h-screen flex flex-col overflow-hidden bg-background dark:bg-black pt-20"
+      className={`relative h-screen flex flex-col overflow-hidden pt-20 ${
+        isMobile 
+          ? "bg-gradient-to-br from-background via-background to-primary/5 dark:from-black dark:via-black dark:to-primary/10"
+          : "bg-background dark:bg-black"
+      }`}
       onMouseMove={handleMouseMove}
     >
       {/* Cursor Trail Effect - Desktop Only */}
@@ -45,12 +49,38 @@ export function HeroSection() {
         {/* Interactive Background Effects - Desktop Only */}
         {!isMobile && <InteractiveBackground className="z-10" />}
         
-        {/* Grid Pattern - Lighter on Mobile */}
+        {/* Grid Pattern - Enhanced for Mobile */}
         <div className={`absolute inset-0 ${
           isMobile 
-            ? "bg-[linear-gradient(rgba(0,0,0,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.01)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.005)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.005)_1px,transparent_1px)] bg-[size:100px_100px]"
+            ? "bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px]"
             : "bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"
         } [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_110%)]`} />
+        
+        {/* Mobile Background Enhancement */}
+        {isMobile && (
+          <>
+            {/* Subtle gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
+            
+            {/* Animated dots pattern */}
+            <div className="absolute inset-0 opacity-40">
+              <div className="absolute top-[20%] left-[10%] w-2 h-2 bg-primary/50 rounded-full mobile-pulse-animation" style={{ animationDelay: '0s' }} />
+              <div className="absolute top-[30%] right-[15%] w-1.5 h-1.5 bg-secondary/50 rounded-full mobile-pulse-animation" style={{ animationDelay: '1s' }} />
+              <div className="absolute top-[60%] left-[20%] w-1 h-1 bg-primary/40 rounded-full mobile-pulse-animation" style={{ animationDelay: '2s' }} />
+              <div className="absolute top-[70%] right-[25%] w-2 h-2 bg-secondary/40 rounded-full mobile-pulse-animation" style={{ animationDelay: '0.5s' }} />
+              <div className="absolute top-[40%] left-[80%] w-1.5 h-1.5 bg-primary/45 rounded-full mobile-pulse-animation" style={{ animationDelay: '1.5s' }} />
+              <div className="absolute top-[80%] left-[60%] w-1 h-1 bg-secondary/35 rounded-full mobile-pulse-animation" style={{ animationDelay: '2.5s' }} />
+              <div className="absolute top-[50%] right-[40%] w-1.5 h-1.5 bg-primary/30 rounded-full mobile-pulse-animation" style={{ animationDelay: '3s' }} />
+              <div className="absolute top-[85%] right-[10%] w-1 h-1 bg-secondary/40 rounded-full mobile-pulse-animation" style={{ animationDelay: '3.5s' }} />
+            </div>
+            
+            {/* Subtle geometric shapes */}
+            <div className="absolute inset-0 opacity-20">
+              <div className="absolute top-[15%] right-[10%] w-8 h-8 border border-primary/20 rotate-45 animate-spin" style={{ animationDuration: '20s' }} />
+              <div className="absolute top-[75%] left-[15%] w-6 h-6 border border-secondary/20 rotate-12 animate-spin" style={{ animationDuration: '25s', animationDirection: 'reverse' }} />
+            </div>
+          </>
+        )}
         
         {/* Floating Orbs - Optimized for Mobile */}
         {!isMobile ? (
@@ -73,7 +103,7 @@ export function HeroSection() {
               }}
             />
             <motion.div
-              className="absolute top-[60%] right-[30%] w-96 h-96 bg-purple-500/30 dark:bg-purple-500/20 rounded-full blur-3xl"
+                  className="absolute top-[60%] right-[30%] w-96 h-96 bg-green-500/30 dark:bg-green-500/20 rounded-full blur-3xl"
               animate={{
                 x: [0, -60, 30, 0],
                 y: [0, 40, -20, 0],
@@ -124,7 +154,7 @@ export function HeroSection() {
               }}
             />
             <motion.div
-              className="absolute top-[55%] right-[25%] w-40 h-40 bg-purple-500/15 dark:bg-purple-500/10 rounded-full blur-2xl"
+                  className="absolute top-[55%] right-[25%] w-40 h-40 bg-green-500/15 dark:bg-green-500/10 rounded-full blur-2xl"
               animate={{
                 x: [0, -15, 8, 0],
                 y: [0, 12, -8, 0],
@@ -141,63 +171,44 @@ export function HeroSection() {
         )}
       </div>
 
-      {/* Main Content - Better mobile spacing */}
+      {/* Main Content - Optimized mobile layout */}
       <div className={`relative z-20 flex-1 flex flex-col justify-center items-center text-center ${
         isMobile 
-          ? "px-6 py-8" // More padding on mobile
+          ? "px-4 py-12 min-h-screen" // Better mobile spacing and full height
           : "px-4 sm:px-6 lg:px-8"
       }`}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className={isMobile ? "w-full" : "max-w-4xl mx-auto"}
+          className={`${isMobile ? "w-full space-y-6" : "max-w-4xl mx-auto"}`}
         >
-          {/* Countries Badge - Smaller on mobile */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className={`inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 text-primary font-medium mb-8 ${
-              isMobile 
-                ? "px-3 py-1.5 text-xs" 
-                : "px-4 py-2 text-sm"
-            }`}
-          >
-            <span className={`bg-green-500 rounded-full animate-pulse ${
-              isMobile ? "w-1.5 h-1.5" : "w-2 h-2"
-            }`}></span>
-            <span className={isMobile ? "text-xs" : "text-sm"}>
-              Trusted by companies across Italy, Spain, Austria & Australia
-            </span>
-          </motion.div>
-
           {/* Main Heading with Sparkles - Much larger on mobile */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className={isMobile ? "mb-6" : "mb-8"}
+            className={isMobile ? "mb-4" : "mb-8"}
           >
             <h1 className={`font-bold leading-tight ${
               isMobile 
-                ? "text-6xl sm:text-7xl" // Much larger on mobile
+                ? "text-7xl sm:text-8xl" // Even larger on mobile - dominant element
                 : "text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
             }`}>
-              <SparklesText 
-                text="Sitovia" 
-                className={`font-bold ${
-                  isMobile 
-                    ? "text-6xl sm:text-7xl" // Much larger on mobile
-                    : "text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
-                }`}
-                sparklesCount={isMobile ? 3 : 8}
-                colors={{ first: "#9333EA", second: "#C084FC" }}
-              />
+                  <SparklesText 
+                    text="Sitovia" 
+                    className={`font-bold ${
+                      isMobile 
+                        ? "text-7xl sm:text-8xl" // Even larger on mobile - hero element
+                        : "text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+                    }`}
+                    sparklesCount={isMobile ? 3 : 8}
+                    colors={{ first: "#70be43", second: "#86ce59" }}
+                  />
               <br />
-              <span className={`bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent ${
+              <span className={`bg-gradient-to-r from-primary via-green-600 to-green-400 bg-clip-text text-transparent ${
                 isMobile 
-                  ? "text-3xl sm:text-4xl" // Smaller subtitle on mobile
+                  ? "text-2xl sm:text-3xl" // Proportionally smaller subtitle
                   : "text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
               }`}>
                 Software Solutions
@@ -212,7 +223,7 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className={`text-muted-foreground dark:text-white/70 max-w-2xl mx-auto leading-relaxed ${
               isMobile 
-                ? "text-base mb-8 px-4" // Better mobile spacing
+                ? "text-sm mb-6 px-2" // Smaller and tighter on mobile
                 : "text-lg sm:text-xl mb-10"
             }`}
           >
@@ -227,7 +238,7 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.7 }}
             className={`flex justify-center items-center ${
               isMobile 
-                ? "flex-col gap-3 px-4" // Tighter spacing on mobile
+                ? "flex-col gap-4 px-2" // Better spacing on mobile
                 : "flex-col sm:flex-row gap-4"
             }`}
           >
@@ -263,6 +274,25 @@ export function HeroSection() {
                 </Button>
               </Link>
             </MagneticElement>
+          </motion.div>
+
+          {/* Countries Badge - Below buttons on mobile, after buttons on desktop */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.9 }}
+            className={`inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 text-primary font-medium ${
+              isMobile 
+                ? "mt-6 px-3 py-1.5 text-xs" 
+                : "mt-8 px-4 py-2 text-sm"
+            }`}
+          >
+            <span className={`bg-green-500 rounded-full animate-pulse ${
+              isMobile ? "w-1.5 h-1.5" : "w-2 h-2"
+            }`}></span>
+            <span className={isMobile ? "text-xs" : "text-sm"}>
+              Trusted by companies across Italy, Spain, Austria & Australia
+            </span>
           </motion.div>
         </motion.div>
 

@@ -24,6 +24,14 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   
+  // Disable caching in development for immediate CSS updates
+  ...(process.env.NODE_ENV === 'development' && {
+    webpack: (config: any) => {
+      config.cache = false;
+      return config;
+    },
+  }),
+  
   images: {
     remotePatterns: [
       {

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useParams, usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import {
@@ -138,8 +139,16 @@ export function Header() {
 				{/* Logo */}
 				<Link
 					href={`/${currentLocale}`}
-					className="flex items-center gap-2 transition-opacity hover:opacity-80"
+					className="flex items-center gap-3 transition-opacity hover:opacity-80"
 				>
+					<Image
+						src="/images/logos/Logo.png"
+						alt="Sitovia Logo"
+						width={50}
+						height={50}
+						className="rounded-lg object-contain"
+						priority
+					/>
 					<p className="font-mono text-xl font-bold text-primary">
 						Sitovia
 					</p>

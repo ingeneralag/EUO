@@ -44,7 +44,7 @@ export function InteractiveBackground({ className = "" }: InteractiveBackgroundP
     const initialParticles: Particle[] = [];
     const colors = [
       "rgba(59, 130, 246, 0.6)", // blue
-      "rgba(147, 51, 234, 0.6)", // purple
+      "rgba(112, 190, 67, 0.6)", // green
       "rgba(236, 72, 153, 0.6)", // pink
       "rgba(34, 197, 94, 0.6)",  // green
       "rgba(251, 191, 36, 0.6)", // yellow
@@ -220,7 +220,7 @@ export function InteractiveBackground({ className = "" }: InteractiveBackgroundP
       />
 
       <motion.div
-        className="absolute w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full pointer-events-none"
+        className="absolute w-16 h-16 bg-gradient-to-r from-green-500/20 to-green-400/20 rounded-full pointer-events-none"
         style={{
           right: '25%',
           top: '20%',
@@ -382,7 +382,7 @@ export function InteractiveBackground({ className = "" }: InteractiveBackgroundP
       {/* Ambient Light Effect */}
       {isMouseInside && (
         <motion.div
-          className="absolute w-32 h-32 bg-gradient-radial from-blue-500/20 via-purple-500/10 to-transparent rounded-full pointer-events-none blur-xl"
+          className="absolute w-32 h-32 bg-gradient-radial from-blue-500/20 via-green-500/10 to-transparent rounded-full pointer-events-none blur-xl"
           style={{
             left: mousePosition.x - 64,
             top: mousePosition.y - 64,
