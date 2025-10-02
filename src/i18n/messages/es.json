@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "title": "Sitovia — Soluciones de Software para Europa y Australia",
+    "description": "Servicios profesionales de desarrollo web y móvil para empresas en Italia, España, Austria y Australia. Soluciones de software personalizadas para tus necesidades."
+  },
+  "common": {
+    "brand": "Sitovia",
+    "tagline": "Soluciones de software para Europa y Australia",
+    "cta": "Contáctanos",
+    "learnMore": "Saber Más"
+  },
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "work": "Trabajos",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "pricing": "Precios"
+  },
+  "services": {
+    "web": {
+      "title": "Desarrollo Web",
+      "description": "Sitios web modernos y responsivos adaptados a tu negocio"
+    },
+    "mobile": {
+      "title": "Apps Móviles",
+      "description": "Aplicaciones móviles nativas y multiplataforma"
+    },
+    "ecommerce": {
+      "title": "E-Commerce",
+      "description": "Soluciones completas para tiendas online"
+    },
+    "consulting": {
+      "title": "Consultoría IT",
+      "description": "Guía tecnológica estratégica para tu negocio"
+    },
+    "cloud": {
+      "title": "Soluciones en la Nube",
+      "description": "Infraestructura cloud escalable y migración"
+    },
+    "maintenance": {
+      "title": "Mantenimiento y Soporte",
+      "description": "Soporte técnico y actualizaciones continuas"
+    }
+  },
+  "company": {
+    "story": {
+      "title": "Nuestra Historia",
+      "description": "Conoce nuestro recorrido y valores"
+    },
+    "team": {
+      "title": "Nuestro Equipo",
+      "description": "Conoce a los expertos detrás de Syntax"
+    },
+    "careers": {
+      "title": "Carreras",
+      "description": "Únete a nuestro equipo en crecimiento"
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Perspectivas, tutoriales y noticias de la empresa"
+    }
+  },
+  "hero": {
+    "title": "Construye Tu Futuro Digital",
+    "subtitle": "Soluciones de software profesionales para Europa y Australia",
+    "description": "Creamos aplicaciones web y móviles modernas y escalables que impulsan tu negocio. Desde el concepto hasta el despliegue, somos tu socio tecnológico de confianza.",
+    "cta_primary": "Comienza Tu Proyecto",
+    "cta_secondary": "Ver Nuestro Trabajo",
+    "trusted_by": "Confianza de empresas en",
+    "countries": "Italia, España, Austria y Australia"
+  },
+  "whyChooseUs": {
+    "badge": "Por Qué Elegirnos",
+    "heading": "Lo Que Nos Hace Diferentes",
+    "description": "Descubre las ventajas que nos distinguen y nos convierten en la opción preferida de empresas en todo el mundo."
+  },
+  "contact": {
+    "title": "Trabajemos Juntos",
+    "subtitle": "¿Listo para comenzar tu proyecto?",
+    "email": "Correo Electrónico",
+    "phone": "Teléfono",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje"
+  }
+}
+
+

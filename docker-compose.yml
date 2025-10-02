@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  sitovia-website:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_SITE_URL=https://sitovia.com
+    restart: unless-stopped
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - sitovia-network
+
+networks:
+  sitovia-network:
+    driver: bridge
