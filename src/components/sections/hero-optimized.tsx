@@ -227,25 +227,19 @@ export function HeroSection() {
           </motion.div>
         </motion.div>
 
-         {/* Sparkles under company name only - Mobile optimized */}
-         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-           <div className={`${
-             isMobile 
-               ? "w-[200px] h-[60px] -mt-8" 
-               : "w-[400px] h-[80px] -mt-12"
-           }`}>
-             <SparklesCore
-               id="hero-sparkles"
-               background="transparent"
-               minSize={isMobile ? 0.3 : 0.4}
-               maxSize={isMobile ? 0.6 : 0.8}
-               particleDensity={isMobile ? 40 : 60}
-               className="w-full h-full"
-               particleColor="#FFFFFF"
-               speed={isMobile ? 0.3 : 0.5}
-             />
-           </div>
-         </div>
+        {/* Sparkles under text - Mobile optimized */}
+        <div className="absolute inset-0 pointer-events-none">
+          <SparklesCore
+            id="hero-sparkles"
+            background="transparent"
+            minSize={isMobile ? 0.3 : 0.4}
+            maxSize={isMobile ? 0.8 : 1.2}
+            particleDensity={isMobile ? 30 : 80}
+            className="w-full h-full"
+            particleColor="#FFFFFF"
+            speed={isMobile ? 0.5 : 1}
+          />
+        </div>
       </div>
     </section>
   );
