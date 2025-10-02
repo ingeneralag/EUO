@@ -427,8 +427,53 @@
     padding: 0;
   }
 
-  /* Interactive Background Effects */
-  .bg-gradient-radial {
-    background: radial-gradient(circle, var(--tw-gradient-stops));
+/* Interactive Background Effects */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* Mobile Performance Optimizations */
+@media (max-width: 768px) {
+  /* Reduce motion for better performance */
+  .motion-reduce {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  /* Optimize blur effects */
+  .blur-3xl {
+    filter: blur(20px);
+  }
+  
+  .blur-2xl {
+    filter: blur(15px);
+  }
+  
+  /* Reduce transform complexity */
+  .transform-gpu {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  /* Optimize animations */
+  @keyframes mobile-float {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-10px) scale(1.02); }
+  }
+  
+  .mobile-animate {
+    animation: mobile-float 8s ease-in-out infinite;
   }
 }
+
+/* Prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+} /* Close @layer base */
