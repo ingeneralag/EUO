@@ -35,31 +35,31 @@ export function ServicesSection() {
     {
       value: "web",
       icon: <Globe className="h-auto w-4 shrink-0" />,
-      label: "Web Development",
-      badge: "Modern & Responsive",
-      description: "Build stunning, high-performance websites that captivate your audience. From responsive design to seamless user experience, we create web solutions that drive results and grow your business.",
+      label: t("web.title"),
+      badge: t("web.badge"),
+      description: t("web.description"),
       svgComponent: <WebDevelopment className="w-full h-full" />,
-      imageAlt: "Web Development",
+      imageAlt: t("web.title"),
       href: `/${currentLocale}/services/web-development`,
     },
     {
       value: "seo",
       icon: <Search className="h-auto w-4 shrink-0" />,
-      label: "SEO Optimisation",
-      badge: "Top Rankings",
-      description: "Boost your online visibility and drive organic traffic with our comprehensive SEO strategies. We optimize your website to rank higher on search engines and reach your target audience effectively.",
+      label: t("seo.title"),
+      badge: t("seo.badge"),
+      description: t("seo.description"),
       svgComponent: <SeoOptimization className="w-full h-full" />,
-      imageAlt: "SEO Optimisation",
+      imageAlt: t("seo.title"),
       href: `/${currentLocale}/services/seo-optimization`,
     },
     {
       value: "uiux",
       icon: <Palette className="h-auto w-4 shrink-0" />,
-      label: "UI UX Design",
-      badge: "User-Centered",
-      description: "Create intuitive and engaging user experiences that convert visitors into customers. Our design process focuses on user research, wireframing, and creating beautiful interfaces that users love.",
+      label: t("uiux.title"),
+      badge: t("uiux.badge"),
+      description: t("uiux.description"),
       svgComponent: <UiUxDesign className="w-full h-full" />,
-      imageAlt: "UI UX Design",
+      imageAlt: t("uiux.title"),
       href: `/${currentLocale}/services/ui-ux-design`,
     },
   ];
@@ -189,7 +189,7 @@ export function ServicesSection() {
                     </p>
                     <Link href={service.href}>
                       <Button className="mt-2.5 w-full sm:w-fit gap-2 mx-auto lg:mx-0" size="lg">
-                        Learn More
+                        {t("learnMore")}
                       </Button>
                     </Link>
                   </motion.div>

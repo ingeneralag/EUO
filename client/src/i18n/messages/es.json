@@ -18,29 +18,49 @@
     "pricing": "Precios"
   },
   "services": {
+    "badge": "Lo Que Ofrecemos",
+    "heading": "Transforma Tu Negocio con Nuestros Servicios Expertos",
+    "description": "Soluciones integrales adaptadas a tus necesidades únicas",
+    "learnMore": "Saber Más",
     "web": {
       "title": "Desarrollo Web",
-      "description": "Sitios web modernos y responsivos adaptados a tu negocio"
+      "badge": "Moderno y Responsivo",
+      "description": "Construye sitios web impresionantes y de alto rendimiento que cautiven a tu audiencia. Desde el diseño responsivo hasta la experiencia de usuario fluida, creamos soluciones web que generan resultados y hacen crecer tu negocio."
+    },
+    "seo": {
+      "title": "Optimización SEO",
+      "badge": "Top Rankings",
+      "description": "Impulsa tu visibilidad online y genera tráfico orgánico con nuestras estrategias SEO integrales. Optimizamos tu sitio web para posicionarse mejor en los motores de búsqueda y llegar efectivamente a tu audiencia objetivo."
+    },
+    "uiux": {
+      "title": "Diseño UI/UX",
+      "badge": "Centrado en el Usuario",
+      "description": "Crea experiencias de usuario intuitivas y atractivas que conviertan visitantes en clientes. Nuestro proceso de diseño se enfoca en investigación de usuarios, wireframing y crear interfaces hermosas que los usuarios aman."
     },
     "mobile": {
       "title": "Apps Móviles",
-      "description": "Aplicaciones móviles nativas y multiplataforma"
+      "badge": "Nativas y Multiplataforma",
+      "description": "Desarrolla aplicaciones móviles potentes para iOS y Android. Ya sean nativas o multiplataforma, entregamos apps que tus usuarios amarán, con rendimiento fluido e interfaces intuitivas."
     },
     "ecommerce": {
-      "title": "E-Commerce",
-      "description": "Soluciones completas para tiendas online"
+      "title": "Soluciones E-Commerce",
+      "badge": "Tiendas Online Completas",
+      "description": "Lanza tu tienda online con confianza. Construimos plataformas de comercio electrónico seguras y escalables que convierten visitantes en clientes, con sistemas de pago integrados y gestión de inventario."
     },
     "consulting": {
       "title": "Consultoría IT",
-      "description": "Guía tecnológica estratégica para tu negocio"
+      "badge": "Guía Estratégica",
+      "description": "Navega por el complejo mundo de la tecnología con orientación experta. Nuestros consultores te ayudan a tomar decisiones informadas, optimizar tu infraestructura e implementar mejores prácticas para el éxito a largo plazo."
     },
     "cloud": {
       "title": "Soluciones en la Nube",
-      "description": "Infraestructura cloud escalable y migración"
+      "badge": "Infraestructura Escalable",
+      "description": "Migra a la nube y desbloquea potencial ilimitado. Diseñamos e implementamos arquitecturas en la nube que escalan con tu negocio, asegurando confiabilidad, seguridad y eficiencia de costos."
     },
     "maintenance": {
       "title": "Mantenimiento y Soporte",
-      "description": "Soporte técnico y actualizaciones continuas"
+      "badge": "Siempre Disponible",
+      "description": "Mantén tus sistemas funcionando sin problemas con nuestro soporte continuo. Desde actualizaciones regulares hasta reparaciones de emergencia, estamos aquí 24/7 para asegurar que la tecnología nunca te retrase."
     }
   },
   "company": {
@@ -73,15 +93,168 @@
   "whyChooseUs": {
     "badge": "Por Qué Elegirnos",
     "heading": "Lo Que Nos Hace Diferentes",
-    "description": "Descubre las ventajas que nos distinguen y nos convierten en la opción preferida de empresas en todo el mundo."
+    "description": "Descubre las ventajas que nos distinguen y nos convierten en la opción preferida de empresas en todo el mundo.",
+    "reasons": {
+      "trusted": {
+        "title": "Confiable y Seguro",
+        "description": "Tus datos y proyectos están seguros con nuestras medidas de seguridad empresarial."
+      },
+      "fast": {
+        "title": "Súper Rápido",
+        "description": "Soluciones de alto rendimiento optimizadas para velocidad en todas las plataformas."
+      },
+      "expert": {
+        "title": "Equipo Experto",
+        "description": "Desarrolladores y diseñadores expertos con años de experiencia."
+      },
+      "award": {
+        "title": "Ganador de Premios",
+        "description": "Reconocido por la excelencia por líderes de la industria y clientes."
+      },
+      "support": {
+        "title": "Soporte 24/7",
+        "description": "Asistencia las 24 horas para todas tus necesidades."
+      }
+    }
+  },
+  "work": {
+    "badge": "Nuestros Últimos Trabajos",
+    "heading": "Proyectos Recientes",
+    "description": "Descubre nuestros últimos proyectos y ve cómo hemos ayudado a las empresas a transformar su presencia digital con soluciones innovadoras.",
+    "filters": {
+      "all": "Todos los Proyectos",
+      "web": "Desarrollo Web",
+      "mobile": "Apps Móviles",
+      "ecommerce": "E-Commerce"
+    },
+    "viewProject": "Ver Proyecto",
+    "viewAll": "Ver Todos los Proyectos",
+    "featured": "Destacado",
+    "technologies": "Tecnologías Utilizadas"
+  },
+  "feedback": {
+    "badge": "Testimonios de Clientes",
+    "heading": "¿Has Visto Alguna Vez Este Nivel de Satisfacción del Cliente!",
+    "description": "No solo tomes nuestra palabra — aquí está lo que dicen nuestros clientes sobre nosotros.",
+    "playAudio": "Reproducir Audio",
+    "pauseAudio": "Pausar Audio",
+    "audio": "Audio",
+    "text": "Texto",
+    "reset": "Reiniciar"
+  },
+  "locations": {
+    "badge": "Nuestros Clientes Globales",
+    "heading": "Confianza de Clientes en Todo el Mundo",
+    "description": "Estamos orgullosos de servir clientes increíbles en Italia, España, Austria, USA y Australia, entregando soluciones digitales excepcionales que impulsan su éxito."
+  },
+  "blog": {
+    "badge": "Últimos Insights",
+    "heading": "De Nuestro Blog",
+    "description": "Mantente actualizado con las últimas tendencias, consejos e insights de nuestro equipo de expertos en desarrollo web, SEO y diseño.",
+    "readMore": "Leer Más",
+    "viewAll": "Ver Todos los Artículos",
+    "featured": "Destacado",
+    "minRead": "min de lectura"
   },
   "contact": {
-    "title": "Trabajemos Juntos",
-    "subtitle": "¿Listo para comenzar tu proyecto?",
-    "email": "Correo Electrónico",
-    "phone": "Teléfono",
-    "message": "Mensaje",
-    "send": "Enviar Mensaje"
+    "badge": "Ponte en Contacto",
+    "heading": "Trabajemos Juntos",
+    "description": "¿Listo para comenzar tu próximo proyecto? Nos encantaría saber de ti. Envíanos un mensaje y te responderemos lo antes posible.",
+    "form": {
+      "title": "Envíanos un mensaje",
+      "name": "Nombre Completo",
+      "email": "Dirección de Email",
+      "company": "Empresa",
+      "phone": "Número de Teléfono",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "send": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje Enviado!",
+      "successDescription": "Gracias por tu mensaje. Te responderemos pronto.",
+      "namePlaceholder": "Juan Pérez",
+      "emailPlaceholder": "juan@ejemplo.com",
+      "companyPlaceholder": "Tu Empresa",
+      "phonePlaceholder": "+34 91 123 4567",
+      "subjectPlaceholder": "¿Cómo podemos ayudarte?",
+      "messagePlaceholder": "Cuéntanos sobre tu proyecto..."
+    },
+    "info": {
+      "getInTouch": "Ponte en contacto",
+      "email": {
+        "title": "Escríbenos",
+        "value": "hello@sitovia.com",
+        "description": "Envíanos un email en cualquier momento"
+      },
+      "phone": {
+        "title": "Llámanos",
+        "value": "+39 06 1234 5678",
+        "description": "Lun-Vie de 8am a 5pm"
+      },
+      "address": {
+        "title": "Visítanos",
+        "value": "Roma, Italia",
+        "description": "Via del Corso, 123"
+      },
+      "hours": {
+        "title": "Horario de Oficina",
+        "weekdays": "Lunes - Viernes",
+        "weekdaysTime": "8:00 - 18:00",
+        "saturday": "Sábado",
+        "saturdayTime": "9:00 - 16:00",
+        "sunday": "Domingo",
+        "sundayTime": "Cerrado"
+      },
+      "offices": {
+        "title": "Nuestras Oficinas"
+      }
+    }
+  },
+  "footer": {
+    "description": "Creamos experiencias digitales excepcionales que impulsan el crecimiento empresarial. Desde el desarrollo web hasta la optimización SEO, somos tu socio de confianza en la transformación digital.",
+    "followUs": "Síguenos",
+    "stayUpdated": "Mantente Actualizado",
+    "contact": {
+      "email": "hello@sitovia.com",
+      "phone": "+39 06 1234 5678",
+      "location": "Roma, Italia",
+      "address": "Via del Corso, 123"
+    },
+    "sections": {
+      "services": {
+        "title": "Servicios",
+        "webDevelopment": "Desarrollo Web",
+        "seoOptimization": "Optimización SEO",
+        "uiUxDesign": "Diseño UI/UX",
+        "mobileApps": "Apps Móviles",
+        "ecommerce": "E-commerce"
+      },
+      "company": {
+        "title": "Empresa",
+        "aboutUs": "Acerca de Nosotros",
+        "ourTeam": "Nuestro Equipo",
+        "careers": "Carreras",
+        "blog": "Blog",
+        "contact": "Contacto"
+      },
+      "resources": {
+        "title": "Recursos",
+        "caseStudies": "Casos de Estudio",
+        "documentation": "Documentación",
+        "support": "Soporte",
+        "privacyPolicy": "Política de Privacidad",
+        "termsOfService": "Términos de Servicio"
+      }
+    },
+    "newsletter": {
+      "description": "Suscríbete a nuestro boletín para las últimas actualizaciones e insights.",
+      "placeholder": "Ingresa tu email",
+      "subscribe": "Suscribirse",
+      "privacy": "Respetamos tu privacidad. Cancela la suscripción en cualquier momento."
+    },
+    "copyright": "© 2024 Sitovia. Hecho con",
+    "madeIn": "en Italia, España y Austria.",
+    "backToTop": "Volver arriba"
   }
 }
 

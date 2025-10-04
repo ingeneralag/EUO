@@ -199,16 +199,13 @@ export function ClientFeedbackSection() {
           className="text-center mb-8 md:mb-12"
         >
           <Badge variant="outline" className="mb-3 md:mb-4 bg-background dark:bg-black text-xs md:text-sm">
-            Client Testimonials
+            {t("badge")}
           </Badge>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 px-2">
-            Have You Ever Seen This Level of
-            <br className="hidden sm:block" />
-            <span className="sm:hidden"> </span>
-            Customer Satisfaction !
+            {t("heading")}
           </h2>
           <p className="text-muted-foreground dark:text-white/70 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
-            Don't just take our word for it — here's what our clients say about us.
+            {t("description")}
           </p>
         </motion.div>
 
@@ -275,7 +272,7 @@ export function ClientFeedbackSection() {
                           onClick={() => toggleViewMode(testimonial.id, 'audio')}
                         >
                           <Volume2 className="w-4 h-4" />
-                          Audio
+                          {t("audio")}
                         </Button>
                         <Button
                           variant={mode === 'text' ? 'default' : 'outline'}
@@ -284,7 +281,7 @@ export function ClientFeedbackSection() {
                           onClick={() => toggleViewMode(testimonial.id, 'text')}
                         >
                           <FileText className="w-4 h-4" />
-                          Text
+                          {t("text")}
                         </Button>
                       </div>
 
@@ -333,12 +330,12 @@ export function ClientFeedbackSection() {
                                 {isPlaying === testimonial.id ? (
                                   <>
                                     <Pause className="w-5 h-5" />
-                                    Pause
+                                    {t("pauseAudio")}
                                   </>
                                 ) : (
                                   <>
                                     <Play className="w-5 h-5" />
-                                    Play
+                                    {t("playAudio")}
                                   </>
                                 )}
                               </Button>
@@ -548,8 +545,8 @@ export function ClientFeedbackSection() {
                   Object.values(audioRefs.current).forEach((a) => a?.pause());
                 }}
                 className={`h-2 rounded-full transition-all ${index === currentIndex
-                    ? "bg-primary w-8"
-                    : "bg-muted-foreground/30 w-2 hover:bg-muted-foreground/50"
+                  ? "bg-primary w-8"
+                  : "bg-muted-foreground/30 w-2 hover:bg-muted-foreground/50"
                   }`}
               />
             ))}

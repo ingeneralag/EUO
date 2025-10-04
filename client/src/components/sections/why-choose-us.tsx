@@ -32,39 +32,39 @@ export function WhyChooseUsSection() {
   const reasons = [
     {
       icon: <Shield className="h-4 w-4" />,
-      title: "Trusted & Secure",
-      description: "Your data and projects are safe with our enterprise-grade security measures.",
+      title: t("reasons.trusted.title"),
+      description: t("reasons.trusted.description"),
       area: "md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
     },
     {
       icon: <Zap className="h-4 w-4" />,
-      title: "Lightning Fast",
-      description: "High-performance solutions optimized for speed across all platforms.",
+      title: t("reasons.fast.title"),
+      description: t("reasons.fast.description"),
       area: "md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
     },
     {
       icon: <Users className="h-4 w-4" />,
-      title: "Expert Team",
-      description: "Skilled developers and designers with years of experience.",
+      title: t("reasons.expert.title"),
+      description: t("reasons.expert.description"),
       area: "md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
     },
     {
       icon: <Award className="h-4 w-4" />,
-      title: "Award Winning",
-      description: "Recognized for excellence by industry leaders and clients.",
+      title: t("reasons.award.title"),
+      description: t("reasons.award.description"),
       area: "md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
     },
     {
       icon: <Clock className="h-4 w-4" />,
-      title: "24/7 Support",
-      description: "Round-the-clock assistance for all your needs.",
+      title: t("reasons.support.title"),
+      description: t("reasons.support.description"),
       area: "md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
     }
   ];
 
   return (
     <section
-      className="h-screen flex flex-col justify-center bg-background dark:bg-black relative pt-20 overflow-hidden"
+      className=" flex flex-col justify-center bg-background dark:bg-black relative pt-20 overflow-hidden"
       onMouseMove={handleMouseMove}
     >
       {/* Background Orbs - Same as other sections */}

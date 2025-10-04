@@ -10,28 +10,59 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  // ❌ DO NOT USE 'standalone' for non-Docker deployment
-  // output: 'standalone', // Only for Docker - causes static assets to fail with pm2+nginx
-  
-  // ✅ No assetPrefix or basePath needed for standard deployment
-  // These are left as defaults (undefined and '') for nginx reverse proxy
-  
+
+  // Development-specific settings
+  ...(process.env.NODE_ENV === 'development' && {
+    // Disable static optimization in development
+    output: undefined,
+    // Ensure proper hot reloading
+    onDemandEntries: {
+      maxInactiveAge: 25 * 1000,
+      pagesBufferLength: 2,
+    },
+  }),
+
+  // Enable Turbopack for faster development (Next.js 15+)
+  experimental: {
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
+  },
+
   // Enable static optimization
   trailingSlash: false,
-  generateEtags: true, // Enable ETags for better caching
-  
+  generateEtags: true,
+
   // Optimize for production
   compress: true,
   poweredByHeader: false,
-  
-  // Disable caching in development for immediate CSS updates
-  ...(process.env.NODE_ENV === 'development' && {
-    webpack: (config: any) => {
+
+  // Optimize webpack for faster development
+  webpack: (config, { dev, isServer }) => {
+    if (dev) {
+      // Disable persistent caching in development to prevent stale cache issues
       config.cache = false;
-      return config;
-    },
-  }),
-  
+
+      // Optimize module resolution
+      config.resolve.symlinks = false;
+
+      // Reduce bundle analysis overhead
+      config.optimization = {
+        ...config.optimization,
+        removeAvailableModules: false,
+        removeEmptyChunks: false,
+        splitChunks: false,
+      };
+    }
+
+    return config;
+  },
+
   images: {
     remotePatterns: [
       {
@@ -45,7 +76,7 @@ const nextConfig: NextConfig = {
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
   },
-  
+
   // Ensure proper headers for static assets
   async headers() {
     return [
@@ -54,7 +85,9 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
+            value: process.env.NODE_ENV === 'development'
+              ? 'no-cache, no-store, must-revalidate'
+              : 'public, max-age=31536000, immutable',
           },
         ],
       },

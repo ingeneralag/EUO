@@ -21,10 +21,21 @@
     "badge": "Cosa Offriamo",
     "heading": "Trasforma la Tua Azienda con i Nostri Servizi Esperti",
     "description": "Soluzioni complete personalizzate per le tue esigenze uniche",
+    "learnMore": "Scopri di Più",
     "web": {
       "title": "Sviluppo Web",
       "badge": "Moderno e Responsive",
       "description": "Costruisci siti web accattivanti e ad alte prestazioni che catturano il tuo pubblico. Dal design responsive all'esperienza utente fluida, creiamo soluzioni web che producono risultati e fanno crescere il tuo business."
+    },
+    "seo": {
+      "title": "Ottimizzazione SEO",
+      "badge": "Top Rankings",
+      "description": "Aumenta la tua visibilità online e genera traffico organico con le nostre strategie SEO complete. Ottimizziamo il tuo sito web per posizionarsi meglio sui motori di ricerca e raggiungere efficacemente il tuo pubblico target."
+    },
+    "uiux": {
+      "title": "Design UI/UX",
+      "badge": "Centrato sull'Utente",
+      "description": "Crea esperienze utente intuitive e coinvolgenti che convertono i visitatori in clienti. Il nostro processo di design si concentra sulla ricerca utente, wireframing e sulla creazione di interfacce belle che gli utenti amano."
     },
     "mobile": {
       "title": "App Mobile",
@@ -97,13 +108,38 @@
   "whyChooseUs": {
     "badge": "Perché Sceglierci",
     "heading": "Cosa Ci Rende Diversi",
-    "description": "Scopri i vantaggi che ci distinguono e ci rendono la scelta preferita dalle aziende di tutto il mondo."
+    "description": "Scopri i vantaggi che ci distinguono e ci rendono la scelta preferita dalle aziende di tutto il mondo.",
+    "reasons": {
+      "trusted": {
+        "title": "Affidabile e Sicuro",
+        "description": "I tuoi dati e progetti sono al sicuro con le nostre misure di sicurezza a livello aziendale."
+      },
+      "fast": {
+        "title": "Velocità Fulminea",
+        "description": "Soluzioni ad alte prestazioni ottimizzate per la velocità su tutte le piattaforme."
+      },
+      "expert": {
+        "title": "Team di Esperti",
+        "description": "Sviluppatori e designer esperti con anni di esperienza."
+      },
+      "award": {
+        "title": "Vincitore di Premi",
+        "description": "Riconosciuto per l'eccellenza da leader del settore e clienti."
+      },
+      "support": {
+        "title": "Supporto 24/7",
+        "description": "Assistenza 24 ore su 24 per tutte le tue esigenze."
+      }
+    }
   },
   "feedback": {
+    "badge": "Testimonianze Clienti",
     "heading": "Hai Mai Visto Questo Livello di Soddisfazione del Cliente!",
     "description": "Non credere solo alle nostre parole — ecco cosa dicono di noi i nostri clienti.",
     "playAudio": "Riproduci Audio",
     "pauseAudio": "Pausa Audio",
+    "audio": "Audio",
+    "text": "Testo",
     "reset": "Ripristina"
   },
   "locations": {
@@ -178,6 +214,38 @@
     "description": "Creiamo esperienze digitali eccezionali che guidano la crescita del business. Dallo sviluppo web all'ottimizzazione SEO, siamo il tuo partner di fiducia nella trasformazione digitale.",
     "followUs": "Seguici",
     "stayUpdated": "Rimani Aggiornato",
+    "contact": {
+      "email": "hello@sitovia.com",
+      "phone": "+39 06 1234 5678",
+      "location": "Roma, Italia",
+      "address": "Via del Corso, 123"
+    },
+    "sections": {
+      "services": {
+        "title": "Servizi",
+        "webDevelopment": "Sviluppo Web",
+        "seoOptimization": "Ottimizzazione SEO",
+        "uiUxDesign": "Design UI/UX",
+        "mobileApps": "App Mobili",
+        "ecommerce": "E-commerce"
+      },
+      "company": {
+        "title": "Azienda",
+        "aboutUs": "Chi Siamo",
+        "ourTeam": "Il Nostro Team",
+        "careers": "Carriere",
+        "blog": "Blog",
+        "contact": "Contatto"
+      },
+      "resources": {
+        "title": "Risorse",
+        "caseStudies": "Casi di Studio",
+        "documentation": "Documentazione",
+        "support": "Supporto",
+        "privacyPolicy": "Informativa sulla Privacy",
+        "termsOfService": "Termini di Servizio"
+      }
+    },
     "newsletter": {
       "description": "Iscriviti alla nostra newsletter per gli ultimi aggiornamenti e approfondimenti.",
       "placeholder": "Inserisci la tua email",

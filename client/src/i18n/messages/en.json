@@ -21,10 +21,21 @@
     "badge": "What We Offer",
     "heading": "Transform Your Business with Our Expert Services",
     "description": "Comprehensive solutions tailored to your unique needs",
+    "learnMore": "Learn More",
     "web": {
       "title": "Web Development",
       "badge": "Modern & Responsive",
       "description": "Build stunning, high-performance websites that captivate your audience. From responsive design to seamless user experience, we create web solutions that drive results and grow your business."
+    },
+    "seo": {
+      "title": "SEO Optimization",
+      "badge": "Top Rankings",
+      "description": "Boost your online visibility and drive organic traffic with our comprehensive SEO strategies. We optimize your website to rank higher on search engines and reach your target audience effectively."
+    },
+    "uiux": {
+      "title": "UI/UX Design",
+      "badge": "User-Centered",
+      "description": "Create intuitive and engaging user experiences that convert visitors into customers. Our design process focuses on user research, wireframing, and creating beautiful interfaces that users love."
     },
     "mobile": {
       "title": "Mobile Apps",
@@ -97,13 +108,38 @@
   "whyChooseUs": {
         "badge": "Why Choose Us",
         "heading": "What Makes Us Different",
-        "description": "Discover the advantages that set us apart and make us the preferred choice for businesses worldwide."
+        "description": "Discover the advantages that set us apart and make us the preferred choice for businesses worldwide.",
+        "reasons": {
+          "trusted": {
+            "title": "Trusted & Secure",
+            "description": "Your data and projects are safe with our enterprise-grade security measures."
+          },
+          "fast": {
+            "title": "Lightning Fast",
+            "description": "High-performance solutions optimized for speed across all platforms."
+          },
+          "expert": {
+            "title": "Expert Team",
+            "description": "Skilled developers and designers with years of experience."
+          },
+          "award": {
+            "title": "Award Winning",
+            "description": "Recognized for excellence by industry leaders and clients."
+          },
+          "support": {
+            "title": "24/7 Support",
+            "description": "Round-the-clock assistance for all your needs."
+          }
+        }
       },
       "feedback": {
+        "badge": "Client Testimonials",
         "heading": "Have You Ever Seen This Level of Customer Satisfaction !",
         "description": "Don't just take our word for it — here's what our clients say about us.",
         "playAudio": "Play Audio",
         "pauseAudio": "Pause Audio",
+        "audio": "Audio",
+        "text": "Text",
         "reset": "Reset"
       },
       "locations": {
@@ -178,6 +214,38 @@
         "description": "We create exceptional digital experiences that drive business growth. From web development to SEO optimization, we're your trusted partner in digital transformation.",
         "followUs": "Follow Us",
         "stayUpdated": "Stay Updated",
+        "contact": {
+          "email": "hello@sitovia.com",
+          "phone": "+39 06 1234 5678",
+          "location": "Rome, Italy",
+          "address": "Via del Corso, 123"
+        },
+        "sections": {
+          "services": {
+            "title": "Services",
+            "webDevelopment": "Web Development",
+            "seoOptimization": "SEO Optimization",
+            "uiUxDesign": "UI/UX Design",
+            "mobileApps": "Mobile Apps",
+            "ecommerce": "E-commerce"
+          },
+          "company": {
+            "title": "Company",
+            "aboutUs": "About Us",
+            "ourTeam": "Our Team",
+            "careers": "Careers",
+            "blog": "Blog",
+            "contact": "Contact"
+          },
+          "resources": {
+            "title": "Resources",
+            "caseStudies": "Case Studies",
+            "documentation": "Documentation",
+            "support": "Support",
+            "privacyPolicy": "Privacy Policy",
+            "termsOfService": "Terms of Service"
+          }
+        },
         "newsletter": {
           "description": "Subscribe to our newsletter for the latest updates and insights.",
           "placeholder": "Enter your email",

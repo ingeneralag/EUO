@@ -91,13 +91,13 @@ export function OurLocationsSection() {
           className="text-center mb-6 md:mb-8 lg:mb-10"
         >
           <Badge variant="outline" className="mb-3 md:mb-4 bg-background dark:bg-black text-xs md:text-sm">
-            Our Global Clients
+            {t("badge")}
           </Badge>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 px-2">
-            Trusted by Clients Worldwide
+            {t("heading")}
           </h2>
           <p className="text-muted-foreground dark:text-white/70 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2">
-            We're proud to serve amazing clients across Italy, Spain, Austria, USA, and Australia, delivering exceptional digital solutions that drive their success.
+            {t("description")}
           </p>
         </motion.div>
 

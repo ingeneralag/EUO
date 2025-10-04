@@ -219,7 +219,7 @@ export function ContactSection() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="name" className="text-sm font-medium">
-                          Full Name *
+                          {t("form.name")} *
                         </Label>
                         <div className="relative">
                           <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
@@ -231,14 +231,14 @@ export function ContactSection() {
                             value={formData.name}
                             onChange={handleInputChange}
                             className="pl-10"
-                            placeholder="John Doe"
+                            placeholder={t("form.namePlaceholder")}
                           />
                         </div>
                       </div>
 
                       <div className="space-y-2">
                         <Label htmlFor="email" className="text-sm font-medium">
-                          Email Address *
+                          {t("form.email")} *
                         </Label>
                         <div className="relative">
                           <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
@@ -250,7 +250,7 @@ export function ContactSection() {
                             value={formData.email}
                             onChange={handleInputChange}
                             className="pl-10"
-                            placeholder="john@example.com"
+                            placeholder={t("form.emailPlaceholder")}
                           />
                         </div>
                       </div>
@@ -259,7 +259,7 @@ export function ContactSection() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="company" className="text-sm font-medium">
-                          Company
+                          {t("form.company")}
                         </Label>
                         <div className="relative">
                           <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
@@ -270,14 +270,14 @@ export function ContactSection() {
                             value={formData.company}
                             onChange={handleInputChange}
                             className="pl-10"
-                            placeholder="Your Company"
+                            placeholder={t("form.companyPlaceholder")}
                           />
                         </div>
                       </div>
 
                       <div className="space-y-2">
                         <Label htmlFor="phone" className="text-sm font-medium">
-                          Phone Number
+                          {t("form.phone")}
                         </Label>
                         <div className="relative">
                           <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
@@ -288,7 +288,7 @@ export function ContactSection() {
                             value={formData.phone}
                             onChange={handleInputChange}
                             className="pl-10"
-                            placeholder="+1 (555) 123-4567"
+                            placeholder={t("form.phonePlaceholder")}
                           />
                         </div>
                       </div>
@@ -296,7 +296,7 @@ export function ContactSection() {
 
                     <div className="space-y-2">
                       <Label htmlFor="subject" className="text-sm font-medium">
-                        Subject *
+                        {t("form.subject")} *
                       </Label>
                       <Input
                         id="subject"
@@ -305,13 +305,13 @@ export function ContactSection() {
                         required
                         value={formData.subject}
                         onChange={handleInputChange}
-                        placeholder="How can we help you?"
+                        placeholder={t("form.subjectPlaceholder")}
                       />
                     </div>
 
                     <div className="space-y-2">
                       <Label htmlFor="message" className="text-sm font-medium">
-                        Message *
+                        {t("form.message")} *
                       </Label>
                       <textarea
                         id="message"
@@ -321,7 +321,7 @@ export function ContactSection() {
                         onChange={handleInputChange}
                         rows={5}
                         className="w-full px-3 py-2 text-sm rounded-md border border-input bg-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="Tell us about your project..."
+                        placeholder={t("form.messagePlaceholder")}
                       />
                     </div>
 
@@ -334,12 +334,12 @@ export function ContactSection() {
                       {isSubmitting ? (
                         <>
                           <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                          Sending...
+                          {t("form.sending")}
                         </>
                       ) : (
                         <>
                           <Send className="w-4 h-4" />
-                          Send Message
+                          {t("form.send")}
                         </>
                       )}
                     </Button>
@@ -358,7 +358,7 @@ export function ContactSection() {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <h3 className="text-lg font-semibold text-foreground mb-4">
-                Get in touch
+                {t("info.getInTouch")}
               </h3>
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (

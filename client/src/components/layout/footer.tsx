@@ -5,10 +5,10 @@ import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
+import {
+  Mail,
+  Phone,
+  MapPin,
   ArrowUp,
   Facebook,
   Twitter,
@@ -31,33 +31,33 @@ export function Footer() {
 
   const footerSections = [
     {
-      title: "Services",
+      title: t("sections.services.title"),
       links: [
-        { name: "Web Development", href: `/${currentLocale}/services/web-development` },
-        { name: "SEO Optimization", href: `/${currentLocale}/services/seo` },
-        { name: "UI/UX Design", href: `/${currentLocale}/services/design` },
-        { name: "Mobile Apps", href: `/${currentLocale}/services/mobile` },
-        { name: "E-commerce", href: `/${currentLocale}/services/ecommerce` },
+        { name: t("sections.services.webDevelopment"), href: `/${currentLocale}/services/web-development` },
+        { name: t("sections.services.seoOptimization"), href: `/${currentLocale}/services/seo` },
+        { name: t("sections.services.uiUxDesign"), href: `/${currentLocale}/services/design` },
+        { name: t("sections.services.mobileApps"), href: `/${currentLocale}/services/mobile` },
+        { name: t("sections.services.ecommerce"), href: `/${currentLocale}/services/ecommerce` },
       ]
     },
     {
-      title: "Company",
+      title: t("sections.company.title"),
       links: [
-        { name: "About Us", href: `/${currentLocale}/about` },
-        { name: "Our Team", href: `/${currentLocale}/about/team` },
-        { name: "Careers", href: `/${currentLocale}/careers` },
-        { name: "Blog", href: `/${currentLocale}/blog` },
-        { name: "Contact", href: `/${currentLocale}/contact` },
+        { name: t("sections.company.aboutUs"), href: `/${currentLocale}/about` },
+        { name: t("sections.company.ourTeam"), href: `/${currentLocale}/about/team` },
+        { name: t("sections.company.careers"), href: `/${currentLocale}/careers` },
+        { name: t("sections.company.blog"), href: `/${currentLocale}/blog` },
+        { name: t("sections.company.contact"), href: `/${currentLocale}/contact` },
       ]
     },
     {
-      title: "Resources",
+      title: t("sections.resources.title"),
       links: [
-        { name: "Case Studies", href: `/${currentLocale}/work` },
-        { name: "Documentation", href: `/${currentLocale}/docs` },
-        { name: "Support", href: `/${currentLocale}/support` },
-        { name: "Privacy Policy", href: `/${currentLocale}/privacy` },
-        { name: "Terms of Service", href: `/${currentLocale}/terms` },
+        { name: t("sections.resources.caseStudies"), href: `/${currentLocale}/work` },
+        { name: t("sections.resources.documentation"), href: `/${currentLocale}/docs` },
+        { name: t("sections.resources.support"), href: `/${currentLocale}/support` },
+        { name: t("sections.resources.privacyPolicy"), href: `/${currentLocale}/privacy` },
+        { name: t("sections.resources.termsOfService"), href: `/${currentLocale}/terms` },
       ]
     }
   ];
@@ -71,9 +71,9 @@ export function Footer() {
   ];
 
   const contactInfo = [
-    { icon: Mail, text: "hello@sitovia.com", href: "mailto:hello@sitovia.com" },
-    { icon: Phone, text: "+39 06 1234 5678", href: "tel:+390612345678" },
-    { name: "Rome, Italy", icon: MapPin, text: "Via del Corso, 123", href: "https://maps.google.com" },
+    { icon: Mail, text: t("contact.email"), href: "mailto:hello@sitovia.com" },
+    { icon: Phone, text: t("contact.phone"), href: "tel:+390612345678" },
+    { name: t("contact.location"), icon: MapPin, text: t("contact.address"), href: "https://maps.google.com" },
   ];
 
   const containerVariants = {
@@ -104,7 +104,7 @@ export function Footer() {
       {/* Background Pattern */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:50px_50px]" />
-        
+
         {/* Subtle Floating Orbs */}
         <motion.div
           className="absolute top-[20%] left-[10%] w-32 h-32 bg-primary/10 rounded-full blur-2xl"
@@ -149,7 +149,7 @@ export function Footer() {
             <motion.div variants={itemVariants} className="lg:col-span-4">
               <div className="mb-6">
                 <Link href={`/${currentLocale}`} className="inline-block">
-                  <motion.h3 
+                  <motion.h3
                     className="text-2xl font-bold text-foreground"
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -158,9 +158,7 @@ export function Footer() {
                   </motion.h3>
                 </Link>
                 <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
-                  We create exceptional digital experiences that drive business growth. 
-                  From web development to SEO optimization, we're your trusted partner 
-                  in digital transformation.
+                  {t("description")}
                 </p>
               </div>
 
@@ -182,7 +180,7 @@ export function Footer() {
 
               {/* Social Links */}
               <div className="mt-6">
-                <p className="text-sm font-medium text-foreground mb-3">Follow Us</p>
+                <p className="text-sm font-medium text-foreground mb-3">{t("followUs")}</p>
                 <div className="flex items-center gap-3">
                   {socialLinks.map((social, index) => (
                     <motion.a
@@ -203,8 +201,8 @@ export function Footer() {
 
             {/* Footer Links */}
             {footerSections.map((section, sectionIndex) => (
-              <motion.div 
-                key={section.title} 
+              <motion.div
+                key={section.title}
                 variants={itemVariants}
                 className="lg:col-span-2"
               >
@@ -213,13 +211,13 @@ export function Footer() {
                 </h4>
                 <ul className="space-y-3">
                   {section.links.map((link, linkIndex) => (
-                    <motion.li 
+                    <motion.li
                       key={link.name}
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ 
+                      transition={{
                         delay: sectionIndex * 0.1 + linkIndex * 0.05,
-                        duration: 0.4 
+                        duration: 0.4
                       }}
                       viewport={{ once: true }}
                     >
@@ -244,24 +242,24 @@ export function Footer() {
             {/* Newsletter */}
             <motion.div variants={itemVariants} className="lg:col-span-2">
               <h4 className="text-sm font-semibold text-foreground mb-4">
-                Stay Updated
+                {t("stayUpdated")}
               </h4>
               <p className="text-sm text-muted-foreground mb-4">
-                Subscribe to our newsletter for the latest updates and insights.
+                {t("newsletter.description")}
               </p>
               <div className="space-y-3">
                 <div className="flex gap-2">
                   <input
                     type="email"
-                    placeholder="Enter your email"
+                    placeholder={t("newsletter.placeholder")}
                     className="flex-1 px-3 py-2 text-sm rounded-lg border border-input bg-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
                   />
                   <Button size="sm" className="px-4">
-                    Subscribe
+                    {t("newsletter.subscribe")}
                   </Button>
                 </div>
                 <p className="text-xs text-muted-foreground">
-                  We respect your privacy. Unsubscribe at any time.
+                  {t("newsletter.privacy")}
                 </p>
               </div>
             </motion.div>
@@ -279,37 +277,37 @@ export function Footer() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                <span>© 2024 Sitovia. Made with</span>
+                <span>{t("copyright")}</span>
                 <motion.div
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ duration: 1, repeat: Infinity, repeatDelay: 2 }}
                 >
                   <Heart className="w-4 h-4 text-red-500 fill-current" />
                 </motion.div>
-                <span>in Italy, Spain & Austria.</span>
+                <span>{t("madeIn")}</span>
               </div>
 
               <div className="flex items-center gap-6">
-                <Link 
+                <Link
                   href={`/${currentLocale}/privacy`}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Privacy Policy
+                  {t("sections.resources.privacyPolicy")}
                 </Link>
-                <Link 
+                <Link
                   href={`/${currentLocale}/terms`}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Terms of Service
+                  {t("sections.resources.termsOfService")}
                 </Link>
-                
+
                 {/* Back to Top Button */}
                 <motion.button
                   onClick={scrollToTop}
                   className="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  title="Back to top"
+                  title={t("backToTop")}
                 >
                   <ArrowUp className="w-4 h-4" />
                 </motion.button>

@@ -63,21 +63,21 @@ export function Header() {
 
 	const serviceLinks: NavItemType[] = [
 		{
-			title: "Web Development",
+			title: t('services.web.title'),
 			href: `/${currentLocale}/services/web-development`,
-			description: "Custom websites and web applications built with modern technologies",
+			description: t('services.web.description'),
 			icon: CodeIcon,
 		},
 		{
-			title: "SEO Optimization",
+			title: t('services.seo.title'),
 			href: `/${currentLocale}/services/seo-optimization`,
-			description: "Boost your search rankings and drive organic traffic to your website",
+			description: t('services.seo.description'),
 			icon: GlobeIcon,
 		},
 		{
-			title: "UI/UX Design",
+			title: t('services.uiux.title'),
 			href: `/${currentLocale}/services/ui-ux-design`,
-			description: "User-centered design that converts visitors into customers",
+			description: t('services.uiux.description'),
 			icon: LightbulbIcon,
 		},
 		{
@@ -132,94 +132,94 @@ export function Header() {
 		window.location.href = newPath;
 	};
 
-      return (
-        <header className="fixed top-0 left-0 right-0 z-50 w-full py-4">
-          <div className="mx-auto max-w-6xl px-4">
-            <div className="bg-background/95 dark:bg-black/95 supports-[backdrop-filter]:bg-background/80 supports-[backdrop-filter]:dark:bg-black/80 flex h-14 items-center justify-between rounded-full border border-border dark:border-white/10 px-6 shadow-lg backdrop-blur-xl">
-				{/* Logo */}
-				<Link
-					href={`/${currentLocale}`}
-					className="flex items-center gap-3 transition-opacity hover:opacity-80"
-				>
-					<Image
-						src="/images/logos/Logo.png"
-						alt="Sitovia Logo"
-						width={50}
-						height={50}
-						className="rounded-lg object-contain"
-						priority
-					/>
-					<p className="font-mono text-xl font-bold text-primary">
-						Sitovia
-					</p>
-				</Link>
-
-				{/* Desktop Navigation */}
-				<DesktopMenu
-					serviceLinks={serviceLinks}
-					companyLinks={companyLinks}
-					currentLocale={currentLocale}
-					t={t}
-				/>
-
-				{/* Right Side Actions */}
-				<div className="flex items-center gap-2">
-                {/* Theme Toggle - Temporarily Hidden */}
-                {/* <ThemeToggle /> */}
-
-					{/* Language Switcher */}
-					<div className="relative hidden md:block">
-						<NavigationMenu>
-							<NavigationMenuList>
-								<NavigationMenuItem>
-									<NavigationMenuTrigger className="gap-1">
-										<GlobeIcon className="size-4" />
-										<span className="uppercase">{currentLocale}</span>
-									</NavigationMenuTrigger>
-									<NavigationMenuContent>
-										<ul className="w-48 p-2">
-											{locales.map((locale) => (
-												<li key={locale.code}>
-													<button
-														onClick={() => switchLocale(locale.code)}
-														className={cn(
-															'hover:bg-accent hover:text-accent-foreground flex w-full items-center gap-2 rounded-sm px-3 py-2 text-sm transition-colors',
-															currentLocale === locale.code &&
-																'bg-accent/50 font-medium',
-														)}
-													>
-														<span className="text-lg">{locale.flag}</span>
-														<span>{locale.label}</span>
-													</button>
-												</li>
-											))}
-										</ul>
-									</NavigationMenuContent>
-								</NavigationMenuItem>
-							</NavigationMenuList>
-						</NavigationMenu>
-					</div>
-
-					{/* CTA Button */}
-					<Button
-						asChild
-						className="hidden md:inline-flex"
-						onClick={() => trackCTAClick(t('common.cta'), 'Header')}
+	return (
+		<header className="fixed top-0 left-0 right-0 z-50 w-full py-4">
+			<div className="mx-auto max-w-6xl px-4">
+				<div className="bg-background/95 dark:bg-black/95 supports-[backdrop-filter]:bg-background/80 supports-[backdrop-filter]:dark:bg-black/80 flex h-14 items-center justify-between rounded-full border border-border dark:border-white/10 px-6 shadow-lg backdrop-blur-xl">
+					{/* Logo */}
+					<Link
+						href={`/${currentLocale}`}
+						className="flex items-center gap-3 transition-opacity hover:opacity-80"
 					>
-						<Link href={`/${currentLocale}/contact`}>{t('common.cta')}</Link>
-					</Button>
+						<Image
+							src="/images/logos/Logo.png"
+							alt="Sitovia Logo"
+							width={50}
+							height={50}
+							className="rounded-lg object-contain"
+							priority
+						/>
+						<p className="font-mono text-xl font-bold text-primary">
+							Sitovia
+						</p>
+					</Link>
 
-					{/* Mobile Menu */}
-					<MobileNav
+					{/* Desktop Navigation */}
+					<DesktopMenu
 						serviceLinks={serviceLinks}
 						companyLinks={companyLinks}
 						currentLocale={currentLocale}
-						locales={locales}
-						switchLocale={switchLocale}
 						t={t}
 					/>
+
+					{/* Right Side Actions */}
+					<div className="flex items-center gap-2">
+						{/* Theme Toggle - Temporarily Hidden */}
+						{/* <ThemeToggle /> */}
+
+						{/* Language Switcher */}
+						<div className="relative hidden md:block">
+							<NavigationMenu>
+								<NavigationMenuList>
+									<NavigationMenuItem>
+										<NavigationMenuTrigger className="gap-1">
+											<GlobeIcon className="size-4" />
+											<span className="uppercase">{currentLocale}</span>
+										</NavigationMenuTrigger>
+										<NavigationMenuContent>
+											<ul className="w-48 p-2">
+												{locales.map((locale) => (
+													<li key={locale.code}>
+														<button
+															onClick={() => switchLocale(locale.code)}
+															className={cn(
+																'hover:bg-accent hover:text-accent-foreground flex w-full items-center gap-2 rounded-sm px-3 py-2 text-sm transition-colors',
+																currentLocale === locale.code &&
+																'bg-accent/50 font-medium',
+															)}
+														>
+															<span className="text-lg">{locale.flag}</span>
+															<span>{locale.label}</span>
+														</button>
+													</li>
+												))}
+											</ul>
+										</NavigationMenuContent>
+									</NavigationMenuItem>
+								</NavigationMenuList>
+							</NavigationMenu>
+						</div>
+
+						{/* CTA Button */}
+						<Button
+							asChild
+							className="hidden md:inline-flex"
+							onClick={() => trackCTAClick(t('common.cta'), 'Header')}
+						>
+							<Link href={`/${currentLocale}/contact`}>{t('common.cta')}</Link>
+						</Button>
+
+						{/* Mobile Menu */}
+						<MobileNav
+							serviceLinks={serviceLinks}
+							companyLinks={companyLinks}
+							currentLocale={currentLocale}
+							locales={locales}
+							switchLocale={switchLocale}
+							t={t}
+						/>
+					</div>
 				</div>
-			</div>
 			</div>
 		</header>
 	);

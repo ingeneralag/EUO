@@ -19,7 +19,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <ServicesSection />
-        <OurWorkSection />
+        {/* <OurWorkSection /> */}
         <LastWorkSection />
         <WhyChooseUsSection />
         <ClientFeedbackSection />

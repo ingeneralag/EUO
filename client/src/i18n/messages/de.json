@@ -18,29 +18,49 @@
     "pricing": "Preise"
   },
   "services": {
+    "badge": "Was Wir Bieten",
+    "heading": "Transformieren Sie Ihr Unternehmen mit unseren Expertenservices",
+    "description": "Umfassende Lösungen, die auf Ihre einzigartigen Bedürfnisse zugeschnitten sind",
+    "learnMore": "Mehr Erfahren",
     "web": {
       "title": "Webentwicklung",
-      "description": "Moderne, responsive Websites maßgeschneidert für Ihr Unternehmen"
+      "badge": "Modern & Responsive",
+      "description": "Erstellen Sie beeindruckende, leistungsstarke Websites, die Ihr Publikum begeistern. Von responsivem Design bis hin zu nahtloser Benutzererfahrung schaffen wir Web-Lösungen, die Ergebnisse liefern und Ihr Unternehmen zum Wachsen bringen."
+    },
+    "seo": {
+      "title": "SEO-Optimierung",
+      "badge": "Top-Rankings",
+      "description": "Steigern Sie Ihre Online-Sichtbarkeit und generieren Sie organischen Traffic mit unseren umfassenden SEO-Strategien. Wir optimieren Ihre Website für höhere Rankings in Suchmaschinen und erreichen Ihre Zielgruppe effektiv."
+    },
+    "uiux": {
+      "title": "UI/UX-Design",
+      "badge": "Benutzerzentriert",
+      "description": "Schaffen Sie intuitive und ansprechende Benutzererfahrungen, die Besucher in Kunden verwandeln. Unser Designprozess konzentriert sich auf Benutzerforschung, Wireframing und die Erstellung schöner Schnittstellen, die Benutzer lieben."
     },
     "mobile": {
       "title": "Mobile Apps",
-      "description": "Native und plattformübergreifende mobile Anwendungen"
+      "badge": "Native & Cross-Platform",
+      "description": "Entwickeln Sie leistungsstarke mobile Anwendungen für iOS und Android. Ob nativ oder plattformübergreifend, wir liefern Apps, die Ihre Benutzer lieben werden, mit reibungsloser Leistung und intuitiven Schnittstellen."
     },
     "ecommerce": {
-      "title": "E-Commerce",
-      "description": "Komplette Online-Shop-Lösungen"
+      "title": "E-Commerce-Lösungen",
+      "badge": "Komplette Online-Shops",
+      "description": "Starten Sie Ihren Online-Shop mit Vertrauen. Wir bauen sichere, skalierbare E-Commerce-Plattformen, die Besucher in Kunden verwandeln, mit integrierten Zahlungssystemen und Bestandsverwaltung."
     },
     "consulting": {
       "title": "IT-Beratung",
-      "description": "Strategische Technologieberatung für Ihr Unternehmen"
+      "badge": "Strategische Beratung",
+      "description": "Navigieren Sie durch die komplexe Welt der Technologie mit Expertenberatung. Unsere Berater helfen Ihnen, fundierte Entscheidungen zu treffen, Ihre Infrastruktur zu optimieren und Best Practices für langfristigen Erfolg zu implementieren."
     },
     "cloud": {
       "title": "Cloud-Lösungen",
-      "description": "Skalierbare Cloud-Infrastruktur und Migration"
+      "badge": "Skalierbare Infrastruktur",
+      "description": "Migrieren Sie in die Cloud und schöpfen Sie unbegrenztes Potenzial aus. Wir entwerfen und implementieren Cloud-Architekturen, die mit Ihrem Unternehmen skalieren und Zuverlässigkeit, Sicherheit und Kosteneffizienz gewährleisten."
     },
     "maintenance": {
       "title": "Wartung & Support",
-      "description": "Laufender technischer Support und Updates"
+      "badge": "Immer Verfügbar",
+      "description": "Halten Sie Ihre Systeme reibungslos mit unserem kontinuierlichen Support. Von regelmäßigen Updates bis hin zu Notfallreparaturen sind wir 24/7 da, um sicherzustellen, dass Technologie Sie nie zurückhält."
     }
   },
   "company": {
@@ -73,15 +93,168 @@
   "whyChooseUs": {
     "badge": "Warum Uns Wählen",
     "heading": "Was Uns Unterscheidet",
-    "description": "Entdecken Sie die Vorteile, die uns auszeichnen und zur bevorzugten Wahl für Unternehmen weltweit machen."
+    "description": "Entdecken Sie die Vorteile, die uns auszeichnen und zur bevorzugten Wahl für Unternehmen weltweit machen.",
+    "reasons": {
+      "trusted": {
+        "title": "Vertrauenswürdig & Sicher",
+        "description": "Ihre Daten und Projekte sind mit unseren Unternehmens-Sicherheitsmaßnahmen sicher."
+      },
+      "fast": {
+        "title": "Blitzschnell",
+        "description": "Hochleistungslösungen, die für Geschwindigkeit auf allen Plattformen optimiert sind."
+      },
+      "expert": {
+        "title": "Expertenteam",
+        "description": "Erfahrene Entwickler und Designer mit jahrelanger Erfahrung."
+      },
+      "award": {
+        "title": "Preisgekrönt",
+        "description": "Anerkannt für Exzellenz von Branchenführern und Kunden."
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Rund-um-die-Uhr-Unterstützung für alle Ihre Bedürfnisse."
+      }
+    }
+  },
+  "work": {
+    "badge": "Unsere Neuesten Arbeiten",
+    "heading": "Aktuelle Projekte",
+    "description": "Entdecken Sie unsere neuesten Projekte und sehen Sie, wie wir Unternehmen dabei geholfen haben, ihre digitale Präsenz mit innovativen Lösungen zu transformieren.",
+    "filters": {
+      "all": "Alle Projekte",
+      "web": "Webentwicklung",
+      "mobile": "Mobile Apps",
+      "ecommerce": "E-Commerce"
+    },
+    "viewProject": "Projekt Ansehen",
+    "viewAll": "Alle Projekte Ansehen",
+    "featured": "Empfohlen",
+    "technologies": "Verwendete Technologien"
+  },
+  "feedback": {
+    "badge": "Kundenbewertungen",
+    "heading": "Haben Sie jemals dieses Maß an Kundenzufriedenheit gesehen!",
+    "description": "Glauben Sie nicht nur unserem Wort — hier ist, was unsere Kunden über uns sagen.",
+    "playAudio": "Audio Abspielen",
+    "pauseAudio": "Audio Pausieren",
+    "audio": "Audio",
+    "text": "Text",
+    "reset": "Zurücksetzen"
+  },
+  "locations": {
+    "badge": "Unsere Globalen Kunden",
+    "heading": "Vertrauen von Kunden weltweit",
+    "description": "Wir sind stolz darauf, erstaunliche Kunden in Italien, Spanien, Österreich, USA und Australien zu betreuen und außergewöhnliche digitale Lösungen zu liefern, die ihren Erfolg vorantreiben."
+  },
+  "blog": {
+    "badge": "Neueste Einblicke",
+    "heading": "Aus Unserem Blog",
+    "description": "Bleiben Sie auf dem Laufenden mit den neuesten Trends, Tipps und Einblicken von unserem Expertenteam in Webentwicklung, SEO und Design.",
+    "readMore": "Mehr Lesen",
+    "viewAll": "Alle Artikel Ansehen",
+    "featured": "Empfohlen",
+    "minRead": "Min. Lesezeit"
   },
   "contact": {
-    "title": "Lassen Sie uns zusammenarbeiten",
-    "subtitle": "Bereit, Ihr Projekt zu starten?",
-    "email": "E-Mail",
-    "phone": "Telefon",
-    "message": "Nachricht",
-    "send": "Nachricht senden"
+    "badge": "Kontaktieren Sie uns",
+    "heading": "Lassen Sie uns zusammenarbeiten",
+    "description": "Bereit, Ihr nächstes Projekt zu starten? Wir würden gerne von Ihnen hören. Senden Sie uns eine Nachricht und wir antworten so schnell wie möglich.",
+    "form": {
+      "title": "Senden Sie uns eine Nachricht",
+      "name": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "company": "Unternehmen",
+      "phone": "Telefonnummer",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "send": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "success": "Nachricht gesendet!",
+      "successDescription": "Vielen Dank für Ihre Nachricht. Wir werden uns bald bei Ihnen melden.",
+      "namePlaceholder": "Max Mustermann",
+      "emailPlaceholder": "max@beispiel.de",
+      "companyPlaceholder": "Ihr Unternehmen",
+      "phonePlaceholder": "+49 30 123 4567",
+      "subjectPlaceholder": "Wie können wir Ihnen helfen?",
+      "messagePlaceholder": "Erzählen Sie uns von Ihrem Projekt..."
+    },
+    "info": {
+      "getInTouch": "Kontaktieren Sie uns",
+      "email": {
+        "title": "E-Mail senden",
+        "value": "hello@sitovia.com",
+        "description": "Senden Sie uns jederzeit eine E-Mail"
+      },
+      "phone": {
+        "title": "Anrufen",
+        "value": "+39 06 1234 5678",
+        "description": "Mo-Fr von 8-17 Uhr"
+      },
+      "address": {
+        "title": "Besuchen Sie uns",
+        "value": "Rom, Italien",
+        "description": "Via del Corso, 123"
+      },
+      "hours": {
+        "title": "Bürozeiten",
+        "weekdays": "Montag - Freitag",
+        "weekdaysTime": "8:00 - 18:00",
+        "saturday": "Samstag",
+        "saturdayTime": "9:00 - 16:00",
+        "sunday": "Sonntag",
+        "sundayTime": "Geschlossen"
+      },
+      "offices": {
+        "title": "Unsere Büros"
+      }
+    }
+  },
+  "footer": {
+    "description": "Wir schaffen außergewöhnliche digitale Erfahrungen, die das Unternehmenswachstum vorantreiben. Von der Webentwicklung bis zur SEO-Optimierung sind wir Ihr vertrauenswürdiger Partner bei der digitalen Transformation.",
+    "followUs": "Folgen Sie uns",
+    "stayUpdated": "Bleiben Sie auf dem Laufenden",
+    "contact": {
+      "email": "hello@sitovia.com",
+      "phone": "+39 06 1234 5678",
+      "location": "Rom, Italien",
+      "address": "Via del Corso, 123"
+    },
+    "sections": {
+      "services": {
+        "title": "Dienstleistungen",
+        "webDevelopment": "Webentwicklung",
+        "seoOptimization": "SEO-Optimierung",
+        "uiUxDesign": "UI/UX-Design",
+        "mobileApps": "Mobile Apps",
+        "ecommerce": "E-Commerce"
+      },
+      "company": {
+        "title": "Unternehmen",
+        "aboutUs": "Über uns",
+        "ourTeam": "Unser Team",
+        "careers": "Karriere",
+        "blog": "Blog",
+        "contact": "Kontakt"
+      },
+      "resources": {
+        "title": "Ressourcen",
+        "caseStudies": "Fallstudien",
+        "documentation": "Dokumentation",
+        "support": "Support",
+        "privacyPolicy": "Datenschutzrichtlinie",
+        "termsOfService": "Nutzungsbedingungen"
+      }
+    },
+    "newsletter": {
+      "description": "Abonnieren Sie unseren Newsletter für die neuesten Updates und Einblicke.",
+      "placeholder": "E-Mail eingeben",
+      "subscribe": "Abonnieren",
+      "privacy": "Wir respektieren Ihre Privatsphäre. Abbestellen Sie jederzeit."
+    },
+    "copyright": "© 2024 Sitovia. Hergestellt mit",
+    "madeIn": "in Italien, Spanien und Österreich.",
+    "backToTop": "Nach oben"
   }
 }
 
