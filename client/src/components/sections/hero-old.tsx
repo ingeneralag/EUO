@@ -31,78 +31,77 @@ export function HeroSection() {
     });
   };
 
-      return (
-        <section 
-          className="relative h-screen flex flex-col overflow-hidden bg-background dark:bg-black pt-20"
-          onMouseMove={!isMobile ? handleMouseMove : undefined}
-        >
+  return (
+    <section
+      className="relative flex flex-col overflow-hidden bg-background dark:bg-black pt-20"
+      onMouseMove={!isMobile ? handleMouseMove : undefined}
+    >
       {/* Cursor Trail Effect - Desktop Only */}
       {!isMobile && <CursorTrail />}
-      
+
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Interactive Background Effects - Desktop Only */}
         {!isMobile && <InteractiveBackground className="z-10" />}
-        
+
         {/* Grid Pattern - Lighter on Mobile */}
-        <div className={`absolute inset-0 ${
-          isMobile 
-            ? "bg-[linear-gradient(rgba(0,0,0,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.01)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.005)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.005)_1px,transparent_1px)] bg-[size:100px_100px]"
-            : "bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"
-        } [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_110%)]`} />
-        
-            {/* Floating Orbs with Mouse Interaction - Positioned away from edges */}
-            <motion.div
-              className="absolute top-[20%] left-[25%] w-72 h-72 bg-blue-500/30 dark:bg-blue-500/20 rounded-full blur-3xl"
-              animate={{
-                x: [0, 80, -40, 0],
-                y: [0, -40, 25, 0],
-                scale: [1, 1.2, 0.8, 1],
-              }}
-              style={{
-                transform: `translate(${(mousePosition.x - 500) * 0.02}px, ${(mousePosition.y - 500) * 0.02}px)`,
-              }}
-              transition={{
-                duration: 20,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-            <motion.div
-              className="absolute top-[60%] right-[30%] w-96 h-96 bg-purple-500/30 dark:bg-purple-500/20 rounded-full blur-3xl"
-              animate={{
-                x: [0, -60, 30, 0],
-                y: [0, 40, -20, 0],
-                scale: [1, 0.8, 1.3, 1],
-              }}
-              style={{
-                transform: `translate(${(mousePosition.x - 800) * 0.03}px, ${(mousePosition.y - 600) * 0.03}px)`,
-              }}
-              transition={{
-                duration: 25,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 2,
-              }}
-            />
-            <motion.div
-              className="absolute top-[40%] right-[45%] w-64 h-64 bg-cyan-500/30 dark:bg-cyan-500/20 rounded-full blur-3xl"
-              animate={{
-                x: [0, 50, -30, 0],
-                y: [0, -60, 35, 0],
-                scale: [1, 1.1, 0.9, 1],
-              }}
-              style={{
-                transform: `translate(${(mousePosition.x - 600) * 0.025}px, ${(mousePosition.y - 400) * 0.025}px)`,
-              }}
-              transition={{
-                duration: 18,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 4,
-              }}
-            />
-        
+        <div className={`absolute inset-0 ${isMobile
+          ? "bg-[linear-gradient(rgba(0,0,0,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.01)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.005)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.005)_1px,transparent_1px)] bg-[size:100px_100px]"
+          : "bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"
+          } [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_110%)]`} />
+
+        {/* Floating Orbs with Mouse Interaction - Positioned away from edges */}
+        <motion.div
+          className="absolute top-[20%] left-[25%] w-72 h-72 bg-blue-500/30 dark:bg-blue-500/20 rounded-full blur-3xl"
+          animate={{
+            x: [0, 80, -40, 0],
+            y: [0, -40, 25, 0],
+            scale: [1, 1.2, 0.8, 1],
+          }}
+          style={{
+            transform: `translate(${(mousePosition.x - 500) * 0.02}px, ${(mousePosition.y - 500) * 0.02}px)`,
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute top-[60%] right-[30%] w-96 h-96 bg-purple-500/30 dark:bg-purple-500/20 rounded-full blur-3xl"
+          animate={{
+            x: [0, -60, 30, 0],
+            y: [0, 40, -20, 0],
+            scale: [1, 0.8, 1.3, 1],
+          }}
+          style={{
+            transform: `translate(${(mousePosition.x - 800) * 0.03}px, ${(mousePosition.y - 600) * 0.03}px)`,
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2,
+          }}
+        />
+        <motion.div
+          className="absolute top-[40%] right-[45%] w-64 h-64 bg-cyan-500/30 dark:bg-cyan-500/20 rounded-full blur-3xl"
+          animate={{
+            x: [0, 50, -30, 0],
+            y: [0, -60, 35, 0],
+            scale: [1, 1.1, 0.9, 1],
+          }}
+          style={{
+            transform: `translate(${(mousePosition.x - 600) * 0.025}px, ${(mousePosition.y - 400) * 0.025}px)`,
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 4,
+          }}
+        />
+
         {/* More Gradient Orbs - Positioned away from edges */}
         <motion.div
           className="absolute bottom-[45%] left-[35%] w-80 h-80 bg-gradient-to-r from-pink-500/30 to-orange-500/30 dark:from-pink-500/20 dark:to-orange-500/20 rounded-full blur-3xl"
@@ -190,7 +189,7 @@ export function HeroSection() {
             delay: 7,
           }}
         />
-        
+
         {/* Animated Lines */}
         <motion.div
           className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"
@@ -241,7 +240,7 @@ export function HeroSection() {
               colors={{ first: "#9E7AFF", second: "#FE8BBB" }}
               sparklesCount={15}
             />
-            
+
             {/* Particles under the text */}
             <div className="pointer-events-none absolute left-1/2 top-full -translate-x-1/2 w-[450px] sm:w-[500px] md:w-[650px] h-28 sm:h-32 md:h-36 -mt-7 sm:-mt-8 md:-mt-10">
               <SparklesCore

@@ -155,7 +155,7 @@ export function ClientFeedbackSection() {
   };
 
   return (
-    <section className="h-screen flex flex-col justify-center bg-background dark:bg-black relative pt-20 overflow-hidden">
+    <section className="flex flex-col justify-center bg-background dark:bg-black relative pt-20 overflow-hidden">
       {/* Background Pattern - Same as other sections */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_110%)]" />

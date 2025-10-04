@@ -66,7 +66,7 @@ export function ServicesSection() {
 
   return (
     <section
-      className="h-screen flex flex-col justify-center bg-background dark:bg-black relative pt-20"
+      className="flex flex-col justify-center bg-background dark:bg-black relative pt-20"
       onMouseMove={handleMouseMove}
     >
       {/* Continue the animated background from Hero */}

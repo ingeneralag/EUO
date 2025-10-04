@@ -34,7 +34,7 @@ export function HeroSection() {
 
   return (
     <section
-      className={`relative h-screen flex flex-col overflow-hidden pt-20 ${isMobile
+      className={`relative  flex flex-col overflow-hidden pt-20 ${isMobile
         ? "bg-gradient-to-br from-background via-background to-primary/5 dark:from-black dark:via-black dark:to-primary/10"
         : "bg-background dark:bg-black"
         }`}
@@ -171,7 +171,7 @@ export function HeroSection() {
 
       {/* Main Content - Optimized mobile layout */}
       <div className={`relative z-20 flex-1 flex flex-col justify-center items-center text-center ${isMobile
-        ? "px-4 py-12 min-h-screen" // Better mobile spacing and full height
+        ? "px-4 py-12" // Better mobile spacing
         : "px-4 sm:px-6 lg:px-8"
         }`}>
         <motion.div
